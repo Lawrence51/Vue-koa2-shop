@@ -78,7 +78,7 @@ export default {
       if (!this.user.user || !this.user.password) {
         Toast.fail('请输入用户名和密码')
       } else {
-        axios.post("http://129.204.49.171:3000/signin", this.user)
+        axios.post("http://localhost:3000/signin", this.user)
           .then(res => {
               Toast.success('注册成功')
               this.changeLogin()
@@ -94,7 +94,7 @@ export default {
       if (!this.user.user || !this.user.password) {
         Toast.fail('请输入用户名和密码')
       } else {
-        axios.post("http://129.204.49.171:3000/login", this.user)
+        axios.post("http://localhost:3000/login", this.user)
           .then(res => {
               this.$store.commit('login', res.data.data)
               Toast.success('登陆成功！')
@@ -107,7 +107,7 @@ export default {
       }
     },
     getAdr (user) {
-      // axios.get('http://129.204.49.171:3000/getaddress/'+user)
+      // axios.get('http://localhost:3000/getaddress/'+user)
       //   .then(res=>{
       //     this.$store.commit('getAdr',res.data.data)
       //   })

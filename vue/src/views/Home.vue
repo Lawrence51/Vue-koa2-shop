@@ -170,7 +170,7 @@ export default {
       this.$router.push({ name: 'detail', params: { id } })
     },
     getAllItem () {
-      axios.get('http://129.204.49.171:3000/gethome')
+      axios.get('http://localhost:3000/gethome')
         .then(res => {
           console.log(res.data)
           this.swiper = res.data.swiper

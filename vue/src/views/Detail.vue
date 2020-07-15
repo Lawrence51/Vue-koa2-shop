@@ -94,14 +94,14 @@ export default {
       //提交+food
     },
     getList () {
-      axios.get('http://129.204.49.171:3000/getdetaillist')
+      axios.get('http://localhost:3000/getdetaillist')
         .then(res => {
           this.list = res.data.data
           this.getitem(this.list[this.activeKey].title)
         })
     },
     getitem (title) {
-      axios.get('http://129.204.49.171:3000/getallitem/' + title)
+      axios.get('http://localhost:3000/getallitem/' + title)
         .then(res => {
           this.listItem = res.data.data
         })

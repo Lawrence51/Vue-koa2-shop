@@ -2,7 +2,7 @@ const Sequelize = require('sequelize');
 
 const Op = Sequelize.Op;
 
-const sequelize = new Sequelize('test', 'vueshop', '123456', {
+const sequelize = new Sequelize('test', 'root', '*Ab123456', {
   host: 'localhost',
   dialect: 'mysql',
   port:3306,

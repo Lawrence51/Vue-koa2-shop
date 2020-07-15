@@ -219,7 +219,7 @@ export default {
       this.BuyOrCart = true
     },
     getData (id) {
-      axios.get('http://129.204.49.171:3000/getone/' + id)
+      axios.get('http://localhost:3000/getone/' + id)
         .then(res => {
           this.itemData = res.data.data
           this.changeImgurl = this.itemData.imgurl.substr(0,24)

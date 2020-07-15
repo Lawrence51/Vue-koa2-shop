@@ -134,7 +134,7 @@ export default {
           let data = {
             user: this.user, name: this.name, tel: this.tel, address: this.address, checked: false
           }
-          axios.post('http://129.204.49.171:3000/buildaddress', data)
+          axios.post('http://localhost:3000/buildaddress', data)
             .then(res => {
               if (res.status == 200) Toast.success('地址提交成功')
               const user = this.user
@@ -154,7 +154,7 @@ export default {
           message: '是否删除这个地址？'
         }).then(() => {
           // on confirm
-          axios.get('http://129.204.49.171:3000/deleteaddress/' + id)
+          axios.get('http://localhost:3000/deleteaddress/' + id)
             .then(res => {
               console.log(res)
               if (res.status == 200) Toast.success('删除成功')

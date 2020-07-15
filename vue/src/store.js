@@ -78,13 +78,13 @@ export default new Vuex.Store({
       commit('changeHidden')
     },
     getAdr ({ commit }, user) {
-      axios.get('http://129.204.49.171:3000/getaddress/' + user)
+      axios.get('http://localhost:3000/getaddress/' + user)
         .then(res => {
           commit('getAdr', res.data.data)
         })
     },
     getSearch ({ commit }, name) {
-      axios.post('http://129.204.49.171:3000/search', {name})
+      axios.post('http://localhost:3000/search', {name})
         .then(res => {
           console.log(res.data.data)
           commit('getSearch',res.data.data)
