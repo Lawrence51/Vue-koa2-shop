@@ -219,7 +219,6 @@ export default {
     this.getAllItem()
     this.$store.commit('changeActive', 0)
     this.$store.commit('showBottomBar');
-    Toast.fail('本网站仅做展示，禁止任何经营性目的')
     window.addEventListener('scroll', this.handlescroll);
   },
 }
